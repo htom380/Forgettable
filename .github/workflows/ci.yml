@@ -19,6 +19,7 @@ jobs:
         working-directory: ./forgettable-frontend/ # Set directory of workflow commands
 
     env:
+      CI: "false"
       node-version: 16
 
     steps:
