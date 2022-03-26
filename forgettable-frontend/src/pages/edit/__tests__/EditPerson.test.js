@@ -1,11 +1,11 @@
-import renderer from "react-test-renderer";
-import React from "react";
-import { render, fireEvent, cleanup, screen } from "@testing-library/react";
-import EditPerson from "../EditPerson";
-import { createMemoryHistory } from "history";
-import { MemoryRouter, Router } from "react-router-dom";
-import axios from "axios";
-import firebase from "firebase/compat/app";
+import renderer from 'react-test-renderer';
+import React from 'react';
+import {render, fireEvent, cleanup, screen} from '@testing-library/react';
+import EditPerson from '../EditPerson';
+import {createMemoryHistory} from 'history';
+import {MemoryRouter, Router} from 'react-router-dom';
+import axios from 'axios';
+import firebase from 'firebase/compat/app';
 
 // afterEach(cleanup);
 
@@ -89,6 +89,6 @@ import firebase from "firebase/compat/app";
 //   });
 // });
 
-it("hello", () => {
+it('hello', () => {
   expect(1).toEqual(1);
 });

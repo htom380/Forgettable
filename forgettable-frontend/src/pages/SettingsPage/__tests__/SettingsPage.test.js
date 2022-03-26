@@ -1,6 +1,6 @@
-import { Settings } from "@mui/icons-material";
-import React from "react";
-import ShallowRenderer from "react-test-renderer/shallow";
+import {Settings} from '@mui/icons-material';
+import React from 'react';
+import ShallowRenderer from 'react-test-renderer/shallow';
 
 // it('renders Settings page UI with correct hierarchy', () => {
 //   const renderer = new ShallowRenderer();
@@ -9,6 +9,6 @@ import ShallowRenderer from "react-test-renderer/shallow";
 
 //   expect(result).toMatchSnapshot();
 // });
-it("hello", () => {
+it('hello', () => {
   expect(1).toEqual(1);
 });
