@@ -20,6 +20,7 @@ const getEncounterFromReqBody = (body: any) => {
     date: body.date,
     time_updated: body.time_updated,
     location: body.location,
+    latLong: body.latLong,
     description: body.description,
     persons: body.persons,
   };
@@ -103,6 +104,8 @@ export const updateEncounter = async (
 
     // update encounter
     const newEncounterData = getEncounterFromReqBody(req.body);
+    // update time_updated to the present time
+    newEncounterData.time_updated = new Date(Date.now());
     const updatedEncounter = await encounterService.updateEncounter(
       encounterIdToUpdate,
       newEncounterData,

@@ -5,6 +5,7 @@ import { PersonModel } from "../../models/person.model";
 import app from "../../server";
 import testUtils from "../../utils/test/test-utils";
 import "dotenv/config";
+import {Importance} from "../../enums/importance";
 
 const supertest = require("supertest");
 
@@ -24,30 +25,35 @@ const user1Data = {
   last_name: "Bong",
   encounters: [] as any,
   persons: [] as any,
+  companies: [] as any
 };
 
 const user2Data = {
   last_name: "Mong",
   encounters: [] as any,
   persons: [] as any,
+  companies: [] as any
 };
 
 const user3Data = {
   first_name: "Tingy",
   encounters: [] as any,
   persons: [] as any,
+  companies: [] as any
 };
 
 const user4Data = {
   first_name: "Tingy",
   last_name: "Tangy",
   encounters: [] as any,
+  companies: [] as any
 };
 
 const user5Data = {
   first_name: "Tingy",
   last_name: "Tangy",
   persons: [] as any,
+  companies: [] as any
 };
 
 const person1Data: PersonModel = {
@@ -56,9 +62,11 @@ const person1Data: PersonModel = {
   interests: ["video games", "hockey"],
   organisation: "helloc",
   time_updated: new Date("2022-01-01"),
+  importance_level: null as any,
   how_we_met: "Hockey club",
   birthday: new Date("2002-12-12"),
   encounters: [] as any,
+  companies: [] as any,
   first_met: new Date("2022-01-01"),
   gender: "male",
   image: null as any,
@@ -72,9 +80,11 @@ const person2Data: PersonModel = {
   interests: ["badminton", "golf"],
   organisation: "helloc",
   time_updated: new Date("2022-02-23"),
+  importance_level: Importance.Should_Remember,
   how_we_met: "Skype",
   birthday: new Date("2001-07-16"),
   encounters: [] as any,
+  companies: [] as any,
   first_met: new Date("2022-02-23"),
   gender: "other",
   image: null as any,
