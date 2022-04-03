@@ -56,10 +56,10 @@ jobs:
     - name: "Create .env file from secrets"
       run: |
         touch .env
-        echo "FIREBASE_TEST_AUTH_EMAIL=${{ secrets.FIREBASE_TEST_AUTH_EMAIL }}" >> .env
-        echo "FIREBASE_TEST_AUTH_KEY=${{ secrets.FIREBASE_TEST_AUTH_KEY }}" >> .env
-        echo "FIREBASE_TEST_AUTH_PASS=${{ secrets.FIREBASE_TEST_AUTH_PASS }}" >> .env
-        echo "PORT=${{ secrets.PORT }}" >> .env
+        echo "FIREBASE_TEST_AUTH_EMAIL=test@gmail.com" >> .env
+        echo "FIREBASE_TEST_AUTH_KEY=AIzaSyC1BtS4u1oIsbLSKA1TCzNK8f-PzfiXFOE" >> .env
+        echo "FIREBASE_TEST_AUTH_PASS=password" >> .env
+        echo "PORT=3001" >> .env
       
     - run: npm ci
     - run: npm run test
